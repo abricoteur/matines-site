@@ -1,0 +1,150 @@
+/* La feuille de style des deux pages de Matines.
+   Aucune ressource extérieure : les polices sont servies depuis ce dépôt,
+   et il n'y a pas une ligne de JavaScript. Une page qui accompagne une app
+   sans réseau ne va pas chercher ses caractères chez un tiers. */
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("polices/EBGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("polices/EBGaramond-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("polices/AlegreyaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alegreya Sans";
+  src: url("polices/AlegreyaSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --papier: #f5f0e6;
+  --surface: #fbf7f0;
+  --encre: #221f1a;
+  --encre-lecture: #2b2721;
+  --encre-seconde: #6a6055;
+  --encre-tierce: #948a7c;
+  --filet: #e2d9c8;
+  --accent: #a24e2b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papier: #1a1613;
+    --surface: #241e18;
+    --encre: #f0e7d5;
+    --encre-lecture: #dcd1bc;
+    --encre-seconde: #a79b86;
+    --encre-tierce: #7c7263;
+    --filet: #322b23;
+    --accent: #d3805a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--encre-lecture);
+  font-family: "Alegreya Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid var(--filet);
+}
+
+header svg { display: block; margin: 0 auto 1rem; }
+
+h1 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--encre);
+  margin: 0 0 0.4rem;
+}
+
+.baseline {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--encre-seconde);
+  margin: 0;
+}
+
+h2 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--encre);
+  margin: 2.75rem 0 0.75rem;
+}
+
+h3 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--encre);
+  margin: 2rem 0 0.4rem;
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.4rem; }
+
+/* L'encadré qui porte l'argument central : rien n'est collecté. */
+.affirmation {
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+  margin: 1.75rem 0;
+}
+.affirmation p:last-child { margin-bottom: 0; }
+
+.contact {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--filet);
+  font-size: 0.9rem;
+  color: var(--encre-tierce);
+}
+footer p { margin: 0 0 0.35rem; }
+
+.date-maj { font-size: 0.9rem; color: var(--encre-tierce); margin-top: -0.5rem; }
