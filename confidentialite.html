@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Matines — politique de confidentialité</title>
-<meta name="description" content="Politique de confidentialité de l’application Matines : aucune donnée collectée, aucun serveur, aucun traceur.">
+<meta name="description" content="Politique de confidentialité de l’application Matines, sur iPhone et sur Android : aucune donnée collectée, aucun serveur, aucun traceur.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,10 +21,10 @@
       <path d="M18.4 8.6 L20 7"/>
     </svg>
     <h1>Politique de confidentialité</h1>
-    <p class="baseline">Application Matines</p>
+    <p class="baseline">Application Matines, pour iPhone et Android</p>
   </header>
 
-  <p class="date-maj">En vigueur depuis le 5 septembre 2026.</p>
+  <p class="date-maj">En vigueur depuis le 1<sup>er</sup> octobre 2026.</p>
 
   <div class="affirmation">
     <p><strong>Matines ne collecte aucune donnée personnelle.</strong>
@@ -34,15 +34,19 @@
     que ce soit, y compris à son auteur.</p>
   </div>
 
+  <p>Cette politique vaut pour les deux versions de Matines&nbsp;: celle de
+  l’App Store, pour iPhone, et celle de Google Play, pour Android. Là où les
+  deux diffèrent, la différence est signalée.</p>
+
   <h2>Le responsable du traitement</h2>
   <p>L’application Matines est éditée par Lucas Mennessier, personne physique,
   joignable à l’adresse
   <a href="mailto:matines.app.support@gmail.com">matines.app.support@gmail.com</a>.</p>
 
   <h2>Les données que l’application enregistre sur votre appareil</h2>
-  <p>Matines enregistre un petit nombre d’informations, <strong>uniquement dans
-  la mémoire de votre iPhone</strong>. Elles ne quittent jamais l’appareil et ne
-  sont accessibles à personne d’autre que vous&nbsp;:</p>
+  <p>Matines enregistre un petit nombre d’informations, <strong>uniquement sur
+  votre téléphone</strong>. L’application ne les transmet jamais, ni à son
+  auteur ni à personne d’autre&nbsp;:</p>
   <ul>
     <li>les poèmes que vous mettez en favori&nbsp;;</li>
     <li>les jours où vous avez ouvert le poème du jour, qui servent à calculer
@@ -50,20 +54,27 @@
     <li>vos réglages&nbsp;: thème, taille du texte, activation et heure de la
     notification, et le fait que l’écran d’accueil a déjà été vu.</li>
   </ul>
-  <p>Ces informations sont techniquement stockées dans le conteneur privé de
-  l’application, à l’aide des mécanismes standard d’iOS (SwiftData et
-  <code>UserDefaults</code>). Elles ne sont pas synchronisées avec iCloud.</p>
+  <p>Ces informations sont stockées dans l’espace privé de l’application,
+  auquel les autres applications de votre téléphone n’ont pas accès. Sur
+  iPhone, elles le sont à l’aide des mécanismes standard d’iOS (SwiftData et
+  <code>UserDefaults</code>), et ne sont pas synchronisées avec iCloud. Sur
+  Android, elles le sont dans une base de données locale et dans les
+  préférences de l’application.</p>
 
   <h2>Ce que l’application ne fait pas</h2>
   <ul>
     <li>Aucun compte, aucune inscription, aucune adresse e-mail demandée.</li>
     <li>Aucun appel réseau, d’aucune sorte&nbsp;: Matines fonctionne
-    intégralement en mode avion.</li>
+    intégralement en mode avion. Sur Android, elle ne demande même pas
+    l’accès à Internet.</li>
     <li>Aucune mesure d’audience, aucune télémétrie, aucun rapport
     d’utilisation.</li>
     <li>Aucun identifiant publicitaire, aucun pistage entre applications.</li>
-    <li>Aucune bibliothèque tierce&nbsp;: l’application n’embarque que du code
-    écrit pour elle et les composants fournis par Apple.</li>
+    <li>Aucun service tiers&nbsp;: l’application n’embarque que du code écrit
+    pour elle et des bibliothèques de développement standard — celles fournies
+    par Apple sur iPhone, celles fournies par Google (Android Jetpack) et par
+    JetBrains (Kotlin) sur Android. Aucune d’elles ne transmet quoi que ce
+    soit.</li>
     <li>Aucune lecture de vos contacts, de votre position, de votre
     photothèque ni de votre carnet d’adresses.</li>
   </ul>
@@ -71,25 +82,36 @@
   <h2>Les autorisations demandées</h2>
 
   <h3>Notifications</h3>
-  <p>Si — et seulement si — vous activez le rappel du matin, l’application vous
-  demande l’autorisation d’envoyer des notifications. Elles sont
-  <strong>préparées et déclenchées localement par votre iPhone</strong>&nbsp;:
-  aucun serveur de notification distant n’est utilisé, et aucun jeton
-  d’identification n’est transmis. Vous pouvez révoquer cette autorisation à
-  tout moment dans les Réglages d’iOS.</p>
+  <p>Une seule fois, après votre première lecture complète, l’application vous
+  propose un rappel du matin et vous demande pour cela l’autorisation
+  d’envoyer des notifications. Vous pouvez refuser&nbsp;: rien d’autre ne
+  change dans l’application. Les notifications sont <strong>préparées et
+  déclenchées localement par votre téléphone</strong>&nbsp;: aucun serveur de
+  notification distant n’est utilisé, et aucun jeton d’identification n’est
+  transmis. Vous pouvez révoquer cette autorisation à tout moment dans les
+  réglages de votre téléphone.</p>
+  <p>Sur Android, cette demande n’apparaît qu’à partir d’Android&nbsp;13&nbsp;;
+  sur les versions antérieures, le système accorde l’autorisation à
+  l’installation. L’application déclare aussi une autorisation accordée
+  automatiquement, sans question posée, qui lui permet d’être prévenue du
+  redémarrage du téléphone&nbsp;: un redémarrage efface les rappels
+  programmés, et elle s’en sert uniquement pour reprogrammer le prochain.</p>
 
-  <h3>Ajout à la photothèque</h3>
+  <h3>Ajout à la photothèque (iPhone)</h3>
   <p>Lorsque vous partagez l’image d’un poème, iOS peut proposer de
   l’enregistrer dans vos photos. L’application demande alors une autorisation
   <strong>d’ajout seul</strong>&nbsp;: elle permet d’écrire l’image que vous
   venez de créer, et ne donne aucun accès aux photos déjà présentes sur
-  l’appareil. Aucune photo n’est lue, consultée ni analysée.</p>
+  l’appareil. Aucune photo n’est lue, consultée ni analysée. Sur Android,
+  l’application ne demande aucune autorisation liée aux photos.</p>
 
   <h3>Partage</h3>
-  <p>Quand vous partagez un poème, c’est la feuille de partage d’iOS qui prend
-  le relais&nbsp;: vous choisissez la destination, et Matines ne sait pas ce
-  que vous en faites. L’image est écrite dans un fichier temporaire, remplacé
-  au partage suivant et effacé par le système.</p>
+  <p>Quand vous partagez un poème, c’est le menu de partage de votre téléphone
+  qui prend le relais&nbsp;: vous choisissez la destination, et Matines ne
+  sait pas ce que vous en faites. L’image est écrite dans un fichier
+  temporaire, remplacé au partage suivant. Sur Android, seule l’application
+  que vous choisissez reçoit le droit de lire ce fichier, et uniquement le
+  temps du partage.</p>
 
   <h2>Les cookies et le suivi</h2>
   <p>L’application n’utilise pas de cookies&nbsp;: elle n’affiche aucune page
@@ -98,18 +120,21 @@
   qu’il utilise sont servies depuis le même hébergement que la page.</p>
 
   <h2>Les enfants</h2>
-  <p>Matines est classée 4+ et convient à tous les publics. Puisqu’aucune
-  donnée n’est collectée, aucune donnée d’enfant ne l’est non plus.</p>
+  <p>Matines convient à tous les publics. Puisqu’aucune donnée n’est
+  collectée, aucune donnée d’enfant ne l’est non plus.</p>
 
-  <h2>Le rôle d’Apple</h2>
-  <p>Matines est distribuée par l’App Store. À ce titre, Apple recueille de son
-  côté des informations liées au téléchargement et, si vous y avez consenti
-  dans les réglages de votre appareil, des statistiques d’utilisation et des
-  rapports d’incident anonymisés. Ces traitements sont ceux d’Apple et relèvent
-  de sa propre politique de confidentialité&nbsp;; l’éditeur de Matines n’y a
-  accès à aucun moment sous une forme nominative, et ne les sollicite pas.</p>
+  <h2>Le rôle d’Apple et de Google</h2>
+  <p>Matines est distribuée par l’App Store et par Google Play. À ce titre,
+  Apple et Google recueillent de leur côté des informations liées au
+  téléchargement et, si vous y avez consenti dans les réglages de votre
+  appareil, des statistiques d’utilisation et des rapports d’incident. Ces
+  traitements sont ceux d’Apple et de Google, et relèvent de leurs propres
+  politiques de confidentialité. L’éditeur de Matines n’y a accès qu’à travers
+  des statistiques globales — nombre de téléchargements, taux de plantage —,
+  jamais sous une forme qui permette de vous identifier, et il ne les sollicite
+  pas.</p>
 
-  <h2>Vos droits</h2>
+  <h2>La conservation et la suppression</h2>
   <p>Le règlement général sur la protection des données vous ouvre des droits
   d’accès, de rectification, d’effacement et d’opposition sur vos données
   personnelles. Dans le cas de Matines, ces droits n’ont pas d’objet&nbsp;:
@@ -117,15 +142,15 @@
   n’existe donc aucun fichier vous concernant à consulter, corriger ou
   supprimer.</p>
   <p>Les informations enregistrées sur votre appareil sont sous votre seul
-  contrôle&nbsp;: <strong>désinstaller l’application les efface
-  définitivement</strong>, sans qu’aucune copie ne subsiste nulle part.</p>
+  contrôle&nbsp;: <strong>désinstaller l’application efface définitivement
+  vos favoris et votre historique de lecture</strong>, sans qu’aucune copie
+  n’en subsiste chez l’éditeur.</p>
 
   <h2>Les modifications de cette politique</h2>
   <p>Si une future version de l’application changeait quoi que ce soit à ce qui
-  précède, cette page serait mise à jour et sa date d’entrée en vigueur
-  modifiée en conséquence. Les versions déjà installées ne se mettent pas à
-  jour toutes seules&nbsp;: une nouvelle version passe par l’App Store, et donc
-  par votre accord.</p>
+  précède, cette page serait mise à jour <strong>avant</strong> la publication
+  de cette version, et sa date d’entrée en vigueur modifiée en
+  conséquence.</p>
 
   <h2>Me contacter</h2>
   <p class="contact">Pour toute question relative à cette
